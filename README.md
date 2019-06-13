@@ -11,7 +11,7 @@ As for the current state of the challenge. I have a working button, and changing
 13/06/2019 - I think I may have corrupted my project in some way, my login functionality is not working anymore. Restarting a new project from scratch, and will try to stick with the laravel way of doing things. (routing, views etc)
 I fixed the login part of the challenge. Users can now register for an account, and login using their username and password. I used the laravel auth function for my login functionality. Though I had to change some things like allowing the user to login with their username instead of email address. Also, I had to change password requirements. 
 
-Things that I still need to add
+Things that I still need to add: 
 
 <li>Get username of current logged in user.</li>
 <li>Add current user to activity + datetime log.</li>
@@ -25,5 +25,7 @@ Things that I still need to add
 
 sources: 
 [1] https://laravel-news.com/laravel-5-4-key-too-long-error
+
 [2] https://laracasts.com
+
 [3] https://www.youtube.com/watch?v=n7c5zMk8cx4&t=95s - how to setup a php mysql database
