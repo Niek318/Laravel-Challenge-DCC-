@@ -18,12 +18,11 @@ Things that I still need to add:
 <li>Create a backlog page with a query to select all activities from database where user = logged in user.</li>
 <li>Inspire myself to think of something 'awesome' to add. :thinking:</li>
 
-
-
-
+Also, having some trouble fully understanding where exactly my files should go in Laravel. Will do more research and watch videos on this when I'm spending less time on exams. 
 
 
 sources: 
+
 [1] https://laravel-news.com/laravel-5-4-key-too-long-error
 
 [2] https://laracasts.com
