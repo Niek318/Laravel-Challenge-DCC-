@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
+    // Only authenticated users may enter...
+})->middleware('auth');
+
+Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/backlog', function () {
+    return view('backlog');
 });
 
 Auth::routes();

@@ -1,4 +1,5 @@
 function newActivity() {
+  //get json from boredapi, change respective html values per id.
     $(document).ready(function() {
 
         $.getJSON('http://www.boredapi.com/api/activity/', function(activityJson) {
@@ -9,10 +10,15 @@ function newActivity() {
             document.getElementById("rating").innerHTML = activityJson.accessibility * 5;
             document.getElementById("priceRating").innerHTML = activityJson.price * 5;
 
+
+            //sets the rating stars according to the json values.
             setAccessRating(activityJson.accessibility * 5);
             setPriceRating(activityJson.price * 5);
 
             var jsonString = JSON.stringify(activityJson.activity);
+
+
+            //send a post request to json.php, which inserts the activity into the database
             const xhr = new XMLHttpRequest();
             xhr.open("POST", "/json.php");
             xhr.setRequestHeader("Content-Type", "application/json");
@@ -24,7 +30,7 @@ function newActivity() {
 }
 
 
-
+//set accessibility rating
 function setAccessRating(accessrating) {
     var counter = 1;
 
@@ -40,7 +46,7 @@ function setAccessRating(accessrating) {
     }
 }
 
-
+//set price rating
 function setPriceRating(pricerating) {
     var counter = 1;
 
