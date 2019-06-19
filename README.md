@@ -14,7 +14,6 @@ Setup steps:
 <li>Now both the website and database are running locally, copy paste the link displayed in the terminal after executing the previous step.</li>
 <li>You will now be able to login on the website using the credentials you provided me, or choose to register a new account.</li>
 
-
 before 10-06-2019, spent some time researching what Laravel exactly is, and installed it and started a project with help of laracasts.
 
 10/06/2019 - Today I took on some lessons on laracast. These were about Controllers, Routing, Views and Models. Also, I created a mysql database.
