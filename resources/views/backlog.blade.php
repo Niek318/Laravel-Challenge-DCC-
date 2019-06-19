@@ -4,7 +4,7 @@
 
 <div class="container">
     @if(isset($details))
-        <p> The Search results for your query <b> {{ $query }} </b> are :</p>
+    <p> The Search results for your query <b> {{ $query }} </b> are :</p>
     <h2>Sample User details</h2>
     <table class="table table-striped">
         <thead>
@@ -25,11 +25,11 @@
     @endif
 </div>
 
-    <table>
-      <tr>
+<table>
+    <tr>
         <th>Activity</th>
         <th>Created at</th>
-      </tr>
+    </tr>
     <?php
     if(isset($_COOKIE["CurrentUser"])){
         $user = $_COOKIE["CurrentUser"];
@@ -64,5 +64,5 @@
     }
     $conn->close();
     ?>
-    </table>
+</table>
 @endsection

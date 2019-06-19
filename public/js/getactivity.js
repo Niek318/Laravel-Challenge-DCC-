@@ -1,5 +1,5 @@
 function newActivity() {
-  //get json from boredapi, change respective html values per id.
+    //get json from boredapi, change respective html values per id.
     $(document).ready(function() {
 
         $.getJSON('http://www.boredapi.com/api/activity/', function(activityJson) {

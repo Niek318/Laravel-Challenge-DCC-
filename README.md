@@ -1,5 +1,19 @@
 # Laravel-Challenge-DCC-
-A coding challenge received from Dutch Coding Company for me to Finish.
+A coding challenge received from Dutch Coding Company
+
+
+Setup steps:
+
+<li>Have Laravel installed (Since I received a Laravel challenge I assume this is the case). </li>
+<li>Clone this github repo either via git command prompt or download it.</li>
+<li>Download xampp or an alternative</li>
+<li>Extract the .zip file I added to the git in C:/xampp/htdocs and delete the other content in this folder.</li>
+<li>Open the xampp control panel and start the Apache and MySQL modules.</li>
+<li>Using cmd on windows, or terminal on linux/mac, cd to the cloned git folder.</li>
+<li>Run the command: php artisan serve.</li>
+<li>Now both the website and database are running locally, copy paste the link displayed in the terminal after executing the previous step.</li>
+<li>You will now be able to login on the website using the credentials you provided me, or choose to register a new account.</li>
+
 
 before 10-06-2019, spent some time researching what Laravel exactly is, and installed it and started a project with help of laracasts.
 
@@ -9,7 +23,7 @@ As for the current state of the challenge. I have a working button, and changing
 12/06/2019 - Today I finished the first part of level, including the star rating which took me a bit to understand. I also managed to setup a mySQL database, and log the current activity and datetime to it. I am currently working on the login functionality of the website, having some trouble implementing login via username since the standard laravel function only allows logging in via email, but this will be fixed soon. (around 3-4 hours)
 
 13/06/2019 - I think I may have corrupted my project in some way, my login functionality is not working anymore. Restarting a new project from scratch, and will try to stick with the laravel way of doing things. (routing, views etc)
-I fixed the login part of the challenge. Users can now register for an account, and login using their username and password. I used the laravel auth function for my login functionality, since it was easy to implement and hashed the password for me automatically. Though I had to change some things like allowing the user to login with their username instead of email address. Also, I had to change password requirements since the minimum password length was 8 and the passwords in the challenge pdf ranged from 3 to 4 characters.
+I fixed the login part of the challenge. Users can now register for an account, and login using their username and password. I used the laravel auth function for my login functionality, since it was easy to implement and hashed the password for me automatically. Though I had to change some things like allowing the user to login with their username instead of email address. Also, I had to change password requirements since the minimum password length was 8 and the passwords in the challenge pdf ranged from 3 to 4 characters. (2 hours)
 
 Things that I still need to add:
 
@@ -48,12 +62,14 @@ sources:
 
 [4] https://laracasts.com/discuss/channels/laravel/custom-validation-for-password-reset?page=1
 
-[5]
+[5] https://github.com/prust/wikipedia-movie-data
 
-[6]
+[6] https://www.reddit.com/r/laravel/
 
-[7]
+[7] https://stackoverflow.com/questions/31378357/laravel-5-sending-email
 
-[8]
+[8] https://laravel.com/docs/5.8/authentication
 
-[9]
+[9] https://www.w3schools.com/php/php_mysql_select.asp
+
+[10] https://stackoverflow.com/questions/15617512/get-json-object-from-url
