@@ -1,12 +1,35 @@
+@extends('layouts.app')
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+@section('content')
 
+<div class="container">
+    @if(isset($details))
+        <p> The Search results for your query <b> {{ $query }} </b> are :</p>
+    <h2>Sample User details</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($details as $user)
+            <tr>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    @endif
+</div>
+
+    <table>
+      <tr>
+        <th>Activity</th>
+        <th>Created at</th>
+      </tr>
     <?php
     if(isset($_COOKIE["CurrentUser"])){
         $user = $_COOKIE["CurrentUser"];
@@ -32,13 +55,14 @@
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo " - You were suggested to: " . $row["activity"]. ". On timedate: " . $row["created_at"]. "<br>";
-        }
+          echo "<tr><td>". $row["activity"] ."</td><td>". $row["created_at"] ."</td></tr>" ;
+
+            }
+            echo "</table>";
     } else {
         echo "0 results";
     }
     $conn->close();
     ?>
-
-  </body>
-</html>
+    </table>
+@endsection

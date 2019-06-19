@@ -18,59 +18,10 @@
         <script src= 'js\getactivity.js'></script>
 
 
+
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
     </head>
     <body>
@@ -78,7 +29,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -110,7 +61,7 @@
                   @endphp
                 @endif
 
-              
+
                 <p id="userText">Hello, @php
                   echo($user);
                 @endphp!</p>
@@ -123,16 +74,6 @@
 
                 <button href="#" class="button" type="button" name="button" onclick="newActivity();">Click me!</button>
 
-                <script type="text/javascript">
-                  function checkLoggedIn() {
-                    if (true) {
-
-                    }
-                  }
-
-                </script>
-
-
 
                <p>
                        <i>Accesibility rating:</i>
@@ -141,18 +82,18 @@
                        <i id = "3Star">&#9734;</i>
                        <i id = "4Star">&#9734;</i>
                        <i id = "5Star">&#9734;</i>
-                       <i id = "rating">Rating</i>
+                       <i id = "rating"></i>
 
                </p>
 
                <p>
-                       <i>Price rating:</i>
+                       <i>Cost:</i>
                        <i id = "1StarPrice">&#9734;</i>
                        <i id = "2StarPrice">&#9734;</i>
                        <i id = "3StarPrice">&#9734;</i>
                        <i id = "4StarPrice">&#9734;</i>
                        <i id = "5StarPrice">&#9734;</i>
-                       <i id = "priceRating">Rating</i>
+                       <i id = "priceRating"></i>
 
                </p>
             </div>

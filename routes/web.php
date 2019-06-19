@@ -10,18 +10,21 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Input;
+use App\Activity;
 
-Route::get('/', function () {
-    // Only authenticated users may enter...
-})->middleware('auth');
+
+Route::get('/movies', function() {
+  return view('movie');
+});
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
 
 Route::get('/backlog', function () {
     return view('backlog');
-});
+})->middleware('auth');
 
 Auth::routes();
 

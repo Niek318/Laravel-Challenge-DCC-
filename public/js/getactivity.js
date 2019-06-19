@@ -34,7 +34,7 @@ function newActivity() {
 function setAccessRating(accessrating) {
     var counter = 1;
 
-    while (accessrating >= 1 || counter < 5) {
+    while (accessrating >= 1 || counter <= 5) {
         if (accessrating >= 1) {
             document.getElementById(counter + "Star").innerHTML = "⭐";
         } else {
@@ -50,7 +50,7 @@ function setAccessRating(accessrating) {
 function setPriceRating(pricerating) {
     var counter = 1;
 
-    while (pricerating >= 1 || counter < 5) {
+    while (pricerating >= 1 || counter <= 5) {
         if (pricerating >= 1) {
             document.getElementById(counter + "StarPrice").innerHTML = "⭐";
         } else {
